@@ -4,7 +4,7 @@
   padding: 0;
   font-family: "Ubuntu", sans-serif;
 }
-body{
+body {
   overflow-x: hidden;
 }
 nav {
@@ -16,21 +16,20 @@ nav {
   box-shadow: 0px 0px 15px 0px black;
   color: white;
 }
-nav a{
-  color:white;
+nav a {
+  color: white;
   text-decoration: none;
-  transition:.3s
+  transition: 0.3s;
 }
-nav ul li a:hover{
-  color:rgb(201, 143, 255)
+nav ul li a:hover {
+  color: rgb(201, 143, 255);
 }
-
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;  
-  font-size:20px;
+  gap: 20px;
+  font-size: 20px;
 }
 nav .right-nav {
   display: flex;
@@ -52,47 +51,188 @@ nav .profile-cont img {
   font-weight: bold;
 }
 
-.burger-open{
-  display:none;
+.burger-open {
+  display: none;
 }
-@media(max-width:800px){
-  nav ul{
-    position:absolute;
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+}
+.open-nav {
+  transform: translateX(0);
+}
+
+/* landing */
+
+.landing {
+  height: 500px;
+  background-color: rgb(231, 231, 231);
+  box-sizing: 0px 0px 10px 0px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.landing h1 {
+  font-size: 60px;
+  font-weight: bold;
+  animation: 2s ease-in slide-in;
+}
+.landing h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  font-style: italic;
+  scale: 0;
+  color: rgb(34, 34, 34);
+  animation: 1s ease slide-in;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+/* posts  */
+.post {
+  width: 20%;
+  min-width: 350px;
+  position: relative;
+  margin: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.13);
+}
+.posts-section-title {
+  font-size: 50px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.post:hover {
+  scale: 1.01;
+}
+.post img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.post-tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.post-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.post-tags h3 {
+  font-size: 15px;
+  color: rgb(224, 170, 68);
+}
+.post-date {
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: rgba(128, 128, 128, 0.562);
+  color: white;
+}
+.post-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+.post-desc {
+  text-align: start;
+  margin-top: 10px;
+  color: gray;
+}
+.posts-cont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* animations */
+
+@keyframes slide-in {
+  0% {
+    scale: 0;
+    transform: translateX(-200px);
+    transform: translateY(-50px);
+  }
+  100% {
+    scale: 1;
+    transform: translate(0);
+  }
+}
+
+/* media */
+
+@media (max-width: 800px) {
+  nav ul {
+    position: absolute;
     background-color: purple;
-    right:0;
+    right: 0;
     flex-direction: column;
-    width:100vw;
-    height:100vh;
-    top:0;
-    transform:translateX(2000px);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    transform: translateX(2000px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10;
-    gap:50px;
-    transition:1s;
+    gap: 50px;
+    transition: 1s;
   }
-  .burger-open{
+  .burger-open {
     display: block;
-    font-size:40px;
-    margin-left:50px;
-    scale:1;
-    transition:.5s;
+    font-size: 40px;
+    margin-left: 50px;
+    scale: 1;
+    transition: 0.5s;
     z-index: 1;
   }
 }
-.close-btn{
-  position: absolute;
-  top:40px;
-  right:40px;
-  color:white;
-  font-size: 40px;
-}
-.open-nav{
-  transform:translateX(0)
-}
 
-.changesize{
-  scale:0.1
+@media (max-width: 413px) {
+  nav {
+    padding: 10px 10px 10px 10px;
+  }
+}
+@media (max-width: 339px) {
+  .right-nav {
+    justify-content: center;
+  }
+  .burger-open {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 311px) {
+  nav .profile-cont {
+    margin-left: 20px;
+  }
+  .right-nav .profile-cont img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.changesize {
+  scale: 0.1;
 }
