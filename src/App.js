@@ -9,8 +9,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="home" element={<HomePage />} />
+          <Route index element={<HomePage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
