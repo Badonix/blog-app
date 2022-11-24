@@ -73,7 +73,6 @@ nav .profile-cont img {
 
 .landing {
   height: 500px;
-  background-color: rgb(231, 231, 231);
   box-sizing: 0px 0px 10px 0px black;
   display: flex;
   justify-content: center;
@@ -181,7 +180,7 @@ nav .profile-cont img {
 /* single-post */
 
 .single-post-info-cont {
-  margin-top: 100px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,14 +209,142 @@ nav .profile-cont img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 20px;
 }
 .single-post-author {
   margin-left: 100px;
+  color: gray;
+  font-style: italic;
 }
 .single-post-date {
   margin-right: 100px;
+  color: gray;
+  font-style: italic;
+}
+.single-edit-icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 200px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  gap: 25px;
+}
+.delete-icon {
+  color: rgb(148, 16, 16);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.edit-icon {
+  color: rgb(8, 85, 8);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.delete-icon:hover {
+  color: rgb(80, 11, 11);
+}
+.edit-icon:hover {
+  color: rgb(3, 44, 3);
 }
 
+/* create */
+
+.create-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.make-section-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+.create-post-cover {
+  margin-top: 50px;
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.top-inputs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.title-input {
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+
+  padding: 5px 10px 5px 10px;
+  margin-left: 30px;
+  outline: none;
+  border-style: dashed;
+  border-color: gray;
+}
+.title-input:focus {
+  box-shadow: 5px 5px 5px 5px rgba(17, 17, 17, 0.116);
+}
+
+.file-upload {
+  display: none;
+}
+.upload-icon {
+  font-size: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.507);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+.upload-icon:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.185);
+}
+.blog-text-input {
+  font-size: 30px;
+  margin-top: 50px;
+  width: 100%;
+  height: 450px;
+  resize: none;
+  padding: 10px 7px 10px 7px;
+  border: none;
+  outline: none;
+  border-style: dashed;
+  border-radius: 10px;
+  border-color: gray;
+}
+.blog-text-input:focus {
+  box-shadow: 7px 7px 7px 7px rgba(17, 17, 17, 0.116);
+}
+.publish-btn {
+  margin-left: 20px;
+  width: 120px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 10px;
+  background-color: rgb(42, 167, 129);
+  border: none;
+  transition: 0.3s;
+  color: white;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
+}
+.publish-btn:hover {
+  background-color: rgb(16, 104, 78);
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.192);
+}
+.publish-btn:active {
+  background-color: white;
+  color: black;
+}
 /* animations */
 
 @keyframes slide-in {
@@ -265,6 +392,19 @@ nav .profile-cont img {
     scale: 1;
     transition: 0.5s;
     z-index: 1;
+  }
+}
+@media (max-width: 555px) {
+  .title-input {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .upload-icon {
+    font-size: 20px;
+  }
+  .publish-btn {
+    font-size: 20px;
+    padding: 5px;
   }
 }
 @media (max-width: 500px) {

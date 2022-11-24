@@ -1,9 +1,14 @@
 import React from "react";
-
+import { RiDeleteBinLine } from "react-icons/ri";
+import { AiOutlineEdit } from "react-icons/ai";
 function SinglePost() {
   return (
     <>
       <main className="single-post-info-cont">
+        <div className="single-edit-icons">
+          <RiDeleteBinLine className="delete-icon" />
+          <AiOutlineEdit className="edit-icon" />
+        </div>
         <div className="single-post-about">
           <h3 className="single-post-author">Author: George</h3>
           <h3 className="single-post-date">21 hours ago</h3>
