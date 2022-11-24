@@ -40,8 +40,12 @@ function Navbar() {
             )}
           </ul>
           <div className="profile-cont">
-            <img src="https://i.pinimg.com/736x/3a/64/69/3a6469083e633a02f132c2dea8538e8f.jpg" />
-            <p>Nick</p>
+            <Link to="/profile">
+              <img src="https://i.pinimg.com/736x/3a/64/69/3a6469083e633a02f132c2dea8538e8f.jpg" />
+            </Link>
+            <Link to="/profile">
+              <p>Nick</p>
+            </Link>
           </div>
           <FiMenu
             onClick={handleBurgerOpen}

@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SinglePost from "./pages/SinglePost";
+import Settings from "./pages/Settings";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="blog/:id" element={<SinglePost />} />
+          <Route path="profile" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>

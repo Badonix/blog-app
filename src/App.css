@@ -7,6 +7,22 @@
 body {
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(94, 0, 94);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(197, 197, 197);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(180, 180, 180);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: gray;
+}
 nav {
   display: flex;
   align-items: center;
@@ -345,6 +361,44 @@ nav .profile-cont img {
   background-color: white;
   color: black;
 }
+
+/* settings */
+.info-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.username-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.settings-pfp {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 60px;
+  border: 1px solid black;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
+}
+.username-settings .edit-name {
+  color: green;
+  font-size: 27px;
+  cursor: pointer;
+}
+.settings-username-input {
+  height: 30px;
+  width: auto;
+  padding: 0;
+  outline: none;
+  font-size: 25px;
+  text-align: center;
+}
+
 /* animations */
 
 @keyframes slide-in {
