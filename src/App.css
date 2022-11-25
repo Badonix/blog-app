@@ -363,12 +363,23 @@ nav .profile-cont img {
 }
 
 /* settings */
+.settings-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .info-container {
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 50%;
+  min-width: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgb(255, 168, 255);
 }
 .username-settings {
   display: flex;
@@ -381,22 +392,62 @@ nav .profile-cont img {
   height: 200px;
   object-fit: cover;
   border-radius: 60px;
-  border: 1px solid black;
   margin-bottom: 25px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.192);
 }
-.username-settings .edit-name {
-  color: green;
-  font-size: 27px;
+.pfp-settings-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-img-settings {
+  font-size: 35px;
+  margin-left: 20px;
+  color: rgb(255, 255, 255);
+}
+#pfp-input {
+  display: none;
+}
+.settings-cont {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin: 10px;
+}
+
+.settings-cont label {
+  font-size: 24px;
+}
+.settings-cont input {
+  width: 100%;
+  height: 25px;
+  font-size: 20px;
+  outline: none;
+  padding: 5px;
+  border: none;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.123);
+}
+.save-settings {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: rgb(48, 177, 48);
+  color: white;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.377);
   cursor: pointer;
 }
-.settings-username-input {
-  height: 30px;
-  width: auto;
-  padding: 0;
-  outline: none;
-  font-size: 25px;
-  text-align: center;
+.save-settings:hover {
+  background-color: rgb(30, 151, 30);
+}
+.save-settings:active {
+  background-color: white;
+  color: black;
 }
 
 /* animations */
