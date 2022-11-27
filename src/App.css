@@ -451,6 +451,7 @@ nav .profile-cont img {
 }
 
 /* login */
+
 .login-section,
 .register-section {
   width: 100%;
@@ -478,17 +479,20 @@ nav .profile-cont img {
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.233);
 }
 .email-input-login,
-.email-input-register {
+.email-input-register,
+.username-input-register {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
 .email-input-login label,
-.email-input-register label {
+.email-input-register label,
+.username-input-register label {
   font-size: 24px;
 }
 .email-input-login input,
-.email-input-register input {
+.email-input-register input,
+.username-input-register input {
   font-size: 22px;
   padding: 5px;
   outline: none;
@@ -498,25 +502,30 @@ nav .profile-cont img {
   transition: 0.3s;
 }
 .email-input-login input:focus,
-.email-input-register input:focus {
+.email-input-register input:focus,
+.username-input-register input:focus {
   border-bottom: 2px solid pink;
 }
 .password-input-login input:focus,
-.password-input-register input:focus {
+.password-input-register input:focus,
+.username-input-register input:focus {
   border-bottom: 2px solid pink;
 }
 .password-input-login,
-.password-input-register {
+.password-input-register,
+.username-input-register {
   margin-top: 45px;
   display: flex;
   flex-direction: column;
 }
 .password-input-login label,
-.password-input-register label {
+.password-input-register label,
+.username-input-register label {
   font-size: 24px;
 }
 .password-input-login input,
-.password-input-register input {
+.password-input-register input,
+.username-input-register input {
   font-size: 22px;
   padding: 5px;
   margin-top: 10px;
@@ -543,6 +552,26 @@ nav .profile-cont img {
 .sign-up-button:hover {
   transform: scale(1.02);
   background-color: rgb(253, 133, 223);
+}
+.pfp-register-upload {
+  display: flex;
+  width: 304px;
+  align-items: center;
+  margin-top: 35px;
+  justify-content: space-around;
+}
+.upload-image-icon {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.pfp-register-shape {
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+}
+.upload-image-icon:hover {
+  color: rgb(255, 142, 160);
 }
 
 /* register */
