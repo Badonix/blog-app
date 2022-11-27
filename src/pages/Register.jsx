@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineUpload } from "react-icons/hi";
+import { Link } from "react-router-dom";
 function Register() {
   return (
     <section className="register-section">
@@ -50,6 +51,9 @@ function Register() {
             />
           </div>
           <button className="sign-up-button">Sign Up</button>
+          <Link to="/login">
+            <button className="log-in-instead">Log in instead</button>
+          </Link>
         </div>
       </div>
     </section>

@@ -573,6 +573,25 @@ nav .profile-cont img {
 .upload-image-icon:hover {
   color: rgb(255, 142, 160);
 }
+.log-in-instead,
+.register-instead {
+  margin-top: 35px;
+  width: 304px;
+  height: 35px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.199);
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+}
+.log-in-instead:hover,
+.register-instead:hover {
+  transform: scale(1.02);
+  background-color: rgb(247, 186, 231);
+}
 
 /* register */
 

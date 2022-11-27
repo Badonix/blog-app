@@ -12,20 +12,20 @@ import Settings from "./pages/Settings";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 function App() {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="create" element={<Create />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="blog/:id" element={<SinglePost />} />
-          <Route path="profile" element={<Settings />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
+        <Route path="/" element={<Layout user={user} />}>
+          <Route index element={user ? <HomePage /> : <Login />} />
+          <Route path="create" element={user ? <Create /> : <Login />} />
+          <Route path="contact" element={user ? <Contact /> : <Login />} />
+          <Route path="about" element={user ? <About /> : <Login />} />
+          <Route path="blog/:id" element={user ? <SinglePost /> : <Login />} />
+          <Route path="profile" element={user ? <Settings /> : <Login />} />
+          <Route path="login" element={user ? <HomePage /> : <Login />} />
+          <Route path="register" element={user ? <HomePage /> : <Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
